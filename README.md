@@ -1,6 +1,8 @@
 # aiconfig
 
-全局 AI API Key 管理工具。配置一次，所有项目通用。
+全局 AI API Key 管理工具。配置一次，所有项目通用。 
+
+加密保存 key，避免泄露，即使文件被意外提交到 github 也不会泄露。
 
 统一管理各 AI 厂商的 API Key、Base URL 和模型名。任何项目只需传入模型名，即可获取完整配置，无需重复配置。
 
@@ -71,7 +73,7 @@ conf = get_config("qwen-image-2.0-pro")
 ## CLI 命令
 
 | 命令 | 说明 |
-|---|---|
+| --- | --- |
 | `aiconfig set <provider> <key>` | 设置 API Key（自动加密） |
 | `aiconfig remove <provider>` | 删除 API Key |
 | `aiconfig encrypt` | 加密 keys.yaml 中的明文 Key |
@@ -83,14 +85,14 @@ conf = get_config("qwen-image-2.0-pro")
 ## 支持的厂商
 
 | 厂商 | 文本 | 图片 | 视频 | 音频 |
-|---|---|---|---|---|
-| OpenAI | gpt-5.4, gpt-4.1, o3, o4-mini... | gpt-image-1.5, dall-e-3... | - | gpt-4o-mini-tts... |
-| Google | gemini-3.1-pro, gemini-2.5-flash... | imagen-4.0... | veo-3.1... | - |
+| --- | --- | --- | --- | --- |
+| OpenAI | gpt-5.4, gpt-4.1, o3, o4-mini... | gpt-image-1.5, dall-e-3... | \- | gpt-4o-mini-tts... |
+| Google | gemini-3.1-pro, gemini-2.5-flash... | imagen-4.0... | veo-3.1... | \- |
 | Qwen | qwen3-max, qwen3.5... | qwen-image-2.0-pro, wan2.7... | wan2.6-t2v... | qwen-audio |
-| DeepSeek | deepseek-chat, deepseek-reasoner | - | - | - |
+| DeepSeek | deepseek-chat, deepseek-reasoner | \- | \- | \- |
 | MiniMax | MiniMax-M2.7... | image-01 | Hailuo-2.3... | speech-2.8-hd... |
-| Kimi | kimi-k2.5, kimi-k2-thinking... | - | - | - |
-| 火山引擎 | doubao-seed-2.0... | seedream-4.5... | seedance-2.0... | - |
+| Kimi | kimi-k2.5, kimi-k2-thinking... | \- | \- | \- |
+| 火山引擎 | doubao-seed-2.0... | seedream-4.5... | seedance-2.0... | \- |
 
 编辑 `aiconfig/providers.yaml` 可自行添加或更新模型。
 
@@ -117,3 +119,4 @@ conf = get_config("qwen-image-2.0-pro")
 ## License
 
 MIT
+
