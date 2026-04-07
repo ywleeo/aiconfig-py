@@ -1,0 +1,14 @@
+keys.yaml
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.so
+.venv/
+.env
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/

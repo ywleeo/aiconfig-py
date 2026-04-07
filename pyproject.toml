@@ -1,0 +1,22 @@
+[project]
+name = "aiconfig"
+version = "0.1.0"
+description = "Global AI API key manager. Configure once, use everywhere."
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "click>=8.0",
+    "cryptography>=42.0",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+aiconfig = "aiconfig.cli:cli"
+
+[tool.setuptools.package-data]
+aiconfig = ["*.yaml"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
