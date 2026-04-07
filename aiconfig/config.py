@@ -11,6 +11,8 @@ KEYS_FILE = Path(__file__).parent / "keys.yaml"
 
 
 def _read_raw() -> dict[str, str | None]:
+    if not KEYS_FILE.exists():
+        return {}
     return yaml.safe_load(KEYS_FILE.read_text()) or {}
 
 
