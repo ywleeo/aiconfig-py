@@ -13,9 +13,8 @@
 aiconfig 不需要和你的项目在同一个目录，放在任意位置即可：
 
 ```bash
-git clone <repo-url> ~/tools/aiconfig-py
-cd ~/tools/aiconfig-py
-pip install -e .
+git clone https://github.com/ywleeo/aiconfig-py.git ~/tools/aiconfig-py
+pip install -e ~/tools/aiconfig-py
 ```
 
 > 确保 aiconfig 和你的生产项目在同一个 Python 环境中（同一个 venv 或 conda env）。
